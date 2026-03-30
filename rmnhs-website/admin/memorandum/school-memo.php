@@ -162,52 +162,7 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section footer-logos">
-        <div class="logos-grid">
-          <img src="../../footer/rectologo.png" alt="Recto Logo" class="footer-logo">
-          <img src="../../footer/depedquezon.png" alt="DepED Quezon" class="footer-logo">
-          <img src="../../footer/bagongpilipinas.png" alt="Bagong Pilipinas" class="footer-logo">
-          <img src="../../footer/schoolseal.png" alt="School Seal" class="footer-logo">
-        </div>
-      </div>
-
-      <div class="footer-section footer-facilities">
-        <h3>Our facilities</h3>
-        <ul>
-          <li><a href="#">Libraries</a></li>
-          <li><a href="#">Conferences</a></li>
-          <li><a href="#">Research</a></li>
-          <li><a href="#">IT support</a></li>
-          <li><a href="#">Sport</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section footer-contact">
-        <h3>Contact Us</h3>
-        <h4>RECTO MEMORIAL NATIONAL HIGH SCHOOL</h4>
-        <p class="address">X85C+R5C, Tiaong, Quezon Province</p>
-        <p class="phone">0949 995 1769</p>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/TheRectorianPress" target="_blank" title="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://mail.google.com" target="_blank" title="Gmail">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://maps.google.com/?q=X85C+R5C,+Tiaong,+Quezon+Province" target="_blank" title="Google Maps">
-            <i class="fas fa-location-dot"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy;2026 All Rights Reserved</p>
-    </div>
-  </footer>
+ 
 
   <script>
     let editingId = null;
