@@ -15,11 +15,11 @@
     <div class="footer-section footer-facilities">
       <h3>Our facilities</h3>
       <ul>
-        <li><a href="#">Libraries</a></li>
-        <li><a href="#">Conferences</a></li>
-        <li><a href="#">Research</a></li>
-        <li><a href="#">IT support</a></li>
-        <li><a href="#">Sport</a></li>
+        <li><a href="#">Speech Laboratory</a></li>
+        <li><a href="#">Computer Laboratories</a></li>
+        <li><a href="#">Covered Court</a></li>
+        <li><a href="#">Auditorium</a></li>
+        <li><a href="#">Canteen</a></li>
       </ul>
     </div>
 
