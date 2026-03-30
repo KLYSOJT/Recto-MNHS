@@ -1,0 +1,448 @@
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section footer-logos">
+      <div class="logos-grid">
+        <img src="footer/rectologo.png" alt="Recto Logo" class="footer-logo">
+        <img src="footer/depedquezon.png" alt="DepED Quezon" class="footer-logo">
+        <img src="footer/bagongpilipinas.png" alt="Bagong Pilipinas" class="footer-logo">
+        <img src="footer/schoolseal.png" alt="School Seal" class="footer-logo">
+      </div>
+    </div>
+
+    <div class="footer-section footer-facilities">
+      <h3>Our facilities</h3>
+      <ul>
+        <li><a href="#">Libraries</a></li>
+        <li><a href="#">Conferences</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">IT support</a></li>
+        <li><a href="#">Sport</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section footer-contact">
+      <h3>Contact Us</h3>
+      <h4>RECTO MEMORIAL NATIONAL HIGH SCHOOL</h4>
+      <p class="address">X85C+R5C, Tiaong, Quezon Province</p>
+      <p class="phone">0949 995 1769</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/TheRectorianPress" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://mail.google.com" target="_blank" title="Gmail">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://maps.google.com/?q=X85C+R5C,+Tiaong,+Quezon+Province" target="_blank" title="Google Maps">
+          <i class="fas fa-location-dot"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy;2026 All Rights Reserved</p>
+  </div>
+</footer>
+
+<style>
+/* Footer Styling */
+.footer {
+  background-color: #c2c2c246;
+  padding: 40px 20px 0 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Logos Section */
+.footer-logos {
+  align-items: center;
+  justify-content: center;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Facilities Section */
+.footer-facilities h3,
+.footer-contact h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+.footer-facilities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-facilities li {
+  margin-bottom: 8px;
+}
+
+.footer-facilities a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-facilities a:hover {
+  color: #800000;
+}
+
+/* Contact Section */
+.footer-contact h4 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.footer-contact .address {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+.footer-contact .phone {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:nth-child(1) {
+  color: #1877F2;
+}
+
+.social-icons a:nth-child(1):hover {
+  background-color: #1877F2;
+  color: white;
+  border-color: #1877F2;
+}
+
+.social-icons a:nth-child(2) {
+  color: #EA4335;
+}
+
+.social-icons a:nth-child(2):hover {
+  background-color: #EA4335;
+  color: white;
+  border-color: #EA4335;
+}
+
+.social-icons a:nth-child(3) {
+  color: #DD3D2D;
+}
+
+.social-icons a:nth-child(3):hover {
+  background-color: #DD3D2D;
+  color: white;
+  border-color: #DD3D2D;
+}
+
+.social-icons i {
+  font-size: 1rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #5d0000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Mobile responsive - all phone sizes */
+@media (max-width: 768px) {
+  .footer {
+    padding: 25px 15px 0 15px;
+    margin-top: 40px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+    padding: 0 15px;
+  }
+ 
+  .footer-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Logos Section - stack in single column */
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .footer-logo {
+    height: 50px;
+    max-width: 100%;
+  }
+
+  /* Facilities Section */
+  .footer-facilities h3,
+  .footer-contact h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-facilities ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-facilities li {
+    margin-bottom: 0;
+  }
+
+  .footer-facilities a {
+    font-size: 0.85rem;
+  }
+
+  /* Contact Section */
+  .footer-contact h4 {
+    font-size: 0.9rem;
+  }
+
+  .footer-contact .address,
+  .footer-contact .phone {
+    font-size: 0.8rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-icons i {
+    font-size: 0.9rem;
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px 10px 0 10px;
+    margin-top: 25px;
+  }
+
+  .footer-content {
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+
+  .logos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .footer-logo {
+    height: 35px;
+    max-width: 100%;
+  }
+
+  .footer-facilities h3,
+  .footer-contact h3 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .footer-facilities ul {
+    gap: 6px;
+  }
+
+  .footer-facilities li {
+    margin-bottom: 4px;
+  }
+
+  .footer-facilities a {
+    font-size: 0.75rem;
+  }
+
+  .footer-contact h4 {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-contact .address,
+  .footer-contact .phone {
+    font-size: 0.7rem;
+    margin: 3px 0;
+  }
+
+  .social-icons {
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .social-icons a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-icons i {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Very small mobile (320px and below) */
+@media (max-width: 320px) {
+  .footer {
+    padding: 12px 8px 0 8px;
+    margin-top: 20px;
+  }
+
+  .footer-content {
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 0 8px;
+  }
+
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    max-width: 160px;
+  }
+
+  .footer-logo {
+    height: 28px;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .footer-facilities h3,
+  .footer-contact h3 {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-facilities ul {
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-facilities li {
+    margin-bottom: 2px;
+  }
+
+  .footer-facilities a {
+    font-size: 0.7rem;
+  }
+
+  .footer-contact h4 {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+  }
+
+  .footer-contact .address,
+  .footer-contact .phone {
+    font-size: 0.65rem;
+    margin: 2px 0;
+  }
+
+  .social-icons {
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .social-icons a {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-icons i {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom {
+    padding: 8px;
+    font-size: 0.65rem;
+  }
+}
+</style>
+
+</body>
+</html>

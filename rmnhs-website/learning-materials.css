@@ -1,0 +1,485 @@
+/* ========================================
+   LEARNING MATERIALS PAGE STYLES
+   ======================================== */
+
+/* Learning materials — clean modern theme */
+:root{
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #7a0000;
+  --accent-600: #5d0000;
+  --shadow: 0 8px 24px rgba(15,23,42,0.06);
+  --radius: 14px;
+  --glass: rgba(255,255,255,0.6);
+}
+
+.lm-wrapper{
+  padding: 36px 48px;
+  background: var(--bg);
+  min-height: calc(100vh - 80px);
+}
+
+.lm-title{
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', Arial;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 18px 6px;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lm-title::before{
+  content: "";
+  display: block;
+  width: 8px;
+  height: 48px;
+  background: #5d0000;
+  border-radius: 2px;
+  margin-left: -6px;
+}
+
+.lm-content{ 
+  display: flex; 
+  gap: 28px; 
+  align-items: flex-start;
+}
+
+.lm-left{
+  width: 240px;
+  padding: 18px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.lm-left h3{ 
+  margin: 0 0 12px 6px; 
+  color: #111827; 
+  font-size: 14px;
+}
+
+.folder-list{ 
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
+}
+
+.folder{ 
+  margin-bottom: 10px;
+}
+
+.folder a{ 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  padding: 10px 12px; 
+  border-radius: 10px; 
+  color: #333; 
+  text-decoration: none; 
+  background: transparent; 
+  transition: all .18s ease;
+}
+
+.folder a .folder-ic{ 
+  width: 28px; 
+  height: 20px; 
+  background: linear-gradient(180deg,#ffd77a,#f5b041); 
+  border-radius: 4px; 
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.06);
+}
+
+.folder.active a,
+.folder a:hover{ 
+  background: linear-gradient(90deg, rgba(250,245,245,1), rgba(255,255,255,1)); 
+  color: #0f172a; 
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06); 
+  transform: translateY(-2px);
+}
+
+.folder.active a{ 
+  background: #5d0000; 
+  color: #fff;
+}
+
+.folder.active a .folder-ic{ 
+  filter: brightness(.95);
+}
+
+.lm-right{ 
+  flex: 1;
+}
+
+.lm-controls{ 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 18px;
+}
+
+.sort-pills .pill{ 
+  background: transparent; 
+  border: 1px solid #eee; 
+  color: #374151; 
+  padding: 8px 12px; 
+  border-radius: 999px; 
+  cursor: pointer;
+}
+
+.sort-pills .pill:first-child{ 
+  margin-right: 8px;
+}
+
+.view-icons .icon-btn{ 
+  background: var(--card); 
+  border: 1px solid #eef2f7; 
+  padding: 8px 10px; 
+  border-radius: 8px; 
+  cursor: pointer;
+}
+
+.files-grid{ 
+  background: var(--card); 
+  border-radius: 20px; 
+  padding: 28px; 
+  box-shadow: var(--shadow); 
+  min-height: 360px;
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+  gap: 24px;
+}
+
+.file-card{ 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.file-link{ 
+  text-decoration: none; 
+  color: inherit; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%;
+}
+
+.file-doc{
+  width: 136px; 
+  height: 136px; 
+  background: linear-gradient(180deg,#b4b5b592,#f7fafc); 
+  border-radius: 12px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+  box-shadow: 0 6px 18px rgba(15,23,42,0.04); 
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.file-link:hover .file-doc{ 
+  transform: translateY(-8px); 
+  box-shadow: 0 18px 40px rgba(15,23,42,0.08);
+}
+
+.file-doc:after{ 
+  content: ''; 
+  position: absolute; 
+  right: 12px; 
+  top: 12px; 
+  width: 38px; 
+  height: 28px; 
+  background: #fff; 
+  border-radius: 4px; 
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.04);
+}
+
+.pdf-file-icon{
+  font-size: 80px;
+  color: var(--accent);
+}
+
+.pdf-label{ 
+  position: absolute; 
+  bottom: 12px; 
+  left: 12px; 
+  background: var(--accent); 
+  color: #fff; 
+  padding: 6px 8px; 
+  border-radius: 8px; 
+  font-weight: 700; 
+  font-size: 12px;
+}
+
+.pdf-label.small{ 
+  padding: 4px 6px; 
+  font-size: 11px;
+}
+
+.file-name{ 
+  margin-top: 12px; 
+  font-size: 13px; 
+  color: #111827; 
+  text-align: center; 
+  max-width: 160px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+.empty-grid{ 
+  color: var(--muted); 
+  padding: 26px; 
+  text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE STYLES - LEARNING MATERIALS
+   ======================================== */
+
+/* Tablet Landscape: 1024px */
+@media (max-width: 1024px) {
+  .lm-wrapper {
+    padding: 30px 24px;
+  }
+  
+  .lm-title {
+    font-size: 26px;
+  }
+  
+  .lm-title::before {
+    height: 38px;
+  }
+  
+  .files-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 18px;
+    padding: 20px;
+  }
+  
+  .file-doc {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* Tablet Portrait: 900px */
+@media (max-width: 900px) {
+  .lm-content {
+    flex-direction: column;
+  }
+  
+  .lm-left {
+    width: 100%;
+    order: 2;
+    padding: 15px;
+  }
+  
+  .files-grid {
+    order: 1;
+    padding: 18px;
+  }
+  
+  .folder-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .folder {
+    margin-bottom: 0;
+  }
+  
+  .folder a {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet: 768px */
+@media (max-width: 768px) {
+  .lm-wrapper {
+    padding: 24px 16px;
+  }
+  
+  .lm-title {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  
+  .lm-title::before {
+    height: 32px;
+    width: 6px;
+  }
+  
+  .lm-left {
+    padding: 12px;
+  }
+  
+  .lm-left h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .folder a {
+    padding: 7px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .folder a .folder-ic {
+    width: 22px;
+    height: 16px;
+  }
+  
+  .files-grid {
+    padding: 16px;
+    gap: 14px;
+    min-height: 280px;
+  }
+  
+  .files-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  
+  .file-doc {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .file-doc:after {
+    width: 28px;
+    height: 20px;
+    right: 8px;
+    top: 8px;
+  }
+  
+  .pdf-label {
+    bottom: 8px;
+    left: 8px;
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+  
+  .file-name {
+    font-size: 11px;
+    max-width: 100px;
+    margin-top: 8px;
+  }
+}
+
+/* Mobile: 480px */
+@media (max-width: 480px) {
+  .lm-wrapper {
+    padding: 16px 12px;
+  }
+  
+  .lm-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .lm-title::before {
+    height: 28px;
+    width: 5px;
+  }
+  
+  .lm-content {
+    gap: 16px;
+  }
+  
+  .lm-left {
+    padding: 10px;
+  }
+  
+  .lm-left h3 {
+    font-size: 12px;
+  }
+  
+  .folder-list {
+    gap: 8px;
+  }
+  
+  .folder a {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
+  
+  .folder a .folder-ic {
+    width: 18px;
+    height: 14px;
+  }
+  
+  .files-grid {
+    padding: 12px;
+    gap: 12px;
+    border-radius: 12px;
+    min-height: 200px;
+  }
+  
+  .files-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  
+  .file-doc {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+  }
+  
+  .file-doc:after {
+    width: 20px;
+    height: 16px;
+    right: 6px;
+    top: 6px;
+  }
+  
+  .pdf-label {
+    bottom: 6px;
+    left: 6px;
+    padding: 3px 5px;
+    font-size: 9px;
+    border-radius: 4px;
+  }
+  
+  .file-name {
+    font-size: 10px;
+    max-width: 80px;
+    margin-top: 6px;
+  }
+  
+  .empty-grid {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile: 320px */
+@media (max-width: 360px) {
+  .lm-title {
+    font-size: 18px;
+  }
+  
+  .lm-title::before {
+    height: 24px;
+  }
+  
+  .files-grid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 10px;
+  }
+  
+  .file-doc {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .file-name {
+    font-size: 9px;
+    max-width: 70px;
+  }
+}
+

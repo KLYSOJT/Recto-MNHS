@@ -1,0 +1,11 @@
+# Allow large uploads just for this project (works when PHP runs as an Apache module)
+# Restart Apache after changing these values.
+php_value upload_max_filesize 10G
+php_value post_max_size 10G
+php_value max_execution_time 36000
+php_value max_input_time 36000
+php_value memory_limit 1024M
+
+# If your PHP runs as CGI/FastCGI (php-fpm) these php_value settings won't work here.
+# In that case update the system php.ini (usually C:\xampp\php\php.ini) and restart Apache/PHP-FPM.
+# Also ensure C:\xampp\tmp has enough space and permissions for large uploads.

@@ -1,0 +1,265 @@
+:root {
+    --crimson: #800000;
+    --crimson-light: #a51c30;
+    --parchment: #fafaf9;
+    --text-dark: #1c1917;
+    --text-gray: #78716c;
+    --glass: rgba(255, 255, 255, 0.85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top right, #fef2f2, #f5f5f4);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.portal-wrapper {
+    width: 100%;
+    max-width: 900px;
+    perspective: 1000px;
+    padding: 0 20px;
+}
+
+.glass-card {
+    display: flex;
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px -8px rgba(128, 0, 0, 0.12);
+    min-height: 520px;
+}
+
+/* BRAND PANEL (LEFT) */
+.brand-panel {
+    display: none; /* hide on modern simplified login */
+}
+
+/* container adjustments */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.brand-panel {
+    flex: 1.1;
+    background: var(--crimson);
+    background-image: url('../../userimages/adminpic.png'); /* Subtle texture */
+    color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.top-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-logos img {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.school-type {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.floating-seal {
+    width: 160px;
+    margin-top: 50px;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* LOGIN PANEL (RIGHT) */
+.login-panel {
+    flex: 1;
+    background: #ffffff;
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.status-pill {
+    background: #fdecea;
+    color: var(--crimson);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.form-header h2 {
+    font-size: 1.75rem;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.form-header p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* FLOATING LABELS */
+.floating-label-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.floating-label-group input {
+    width: 100%;
+    padding: 14px 12px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #fafafa;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.floating-label-group label {
+    position: absolute;
+    left: 16px;
+    top: 15px;
+    color: var(--text-gray);
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.floating-label-group input:focus,
+.floating-label-group input:not(:placeholder-shown) {
+    outline: none;
+    border-color: var(--crimson-light);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(165,28,48,0.1);
+}
+
+.floating-label-group input:focus + label,
+.floating-label-group input:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--crimson);
+}
+
+/* BUTTON */
+.glow-button {
+    width: 100%;
+    padding: 14px;
+    background: var(--crimson);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    margin-top: 20px;
+}
+
+.glow-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(128, 0, 0, 0.25);
+    background-color: var(--crimson-light);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin: 12px 0;
+}
+
+/* Modal for success messages */
+.modal {
+    display: block; /* hidden by default; shown conditionally via PHP */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 12% auto;
+    padding: 30px 25px;
+    width: 90%;
+    max-width: 360px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.modal-content p {
+    color: #2e7d32; /* green text */
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* close button removed for a cleaner appearance */
+
+
+.forgot-link { color: var(--crimson); text-decoration: none; font-weight: 600; }
+
+.portal-footer {
+    margin-top: 28px;
+    font-size: 0.7rem;
+    color: #a8a29e;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .glass-card { flex-direction: column; }
+    .brand-panel { padding: 40px; }
+}   
